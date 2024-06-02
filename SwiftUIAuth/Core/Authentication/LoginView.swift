@@ -10,42 +10,42 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
-    
+
     var body: some View {
         NavigationStack {
             VStack {
-                
+
                 // image
                 Image("firebase-icon")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                     .padding(.vertical, 32)
-                
+
                 // form fields
                 VStack(alignment: .leading) {
-                    InputView(text: $email, 
+                    InputView(text: $email,
                               title: "Email Address",
                               placeholder: "name@example.com")
                     .textInputAutocapitalization(.none)
-                    
-                    InputView(text: $password, 
+
+                    InputView(text: $password,
                               title: "Password",
                               placeholder: "Enter your password",
                               isSecureField: true)
                 }
                 .padding(.horizontal)
                 .padding(.top, 12)
-                
+
                 // sign in button
                 Button(action: {
                     print("Sign in button tapped")
                 }, label: {
-                    
+
                     HStack {
                         Text("SIGN IN")
                             .fontWeight(.semibold)
-                        
+
                         Image(systemName: "arrow.right")
                     }
                     .foregroundStyle(.white)
@@ -54,11 +54,12 @@ struct LoginView: View {
                 .background(Color(.systemBlue))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.top, 24)
-                
+
                 Spacer()
-                
+
                 NavigationLink {
-                    
+                    RegistrationView()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     HStack {
                         Text("Don't have an account")
