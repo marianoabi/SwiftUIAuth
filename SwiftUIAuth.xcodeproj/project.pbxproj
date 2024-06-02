@@ -11,6 +11,7 @@
 		E163A1082C0C40E900E33364 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163A1072C0C40E900E33364 /* RegistrationView.swift */; };
 		E163A10A2C0C444900E33364 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163A1092C0C444900E33364 /* ProfileView.swift */; };
 		E163A10C2C0C465300E33364 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163A10B2C0C465300E33364 /* SettingsRowView.swift */; };
+		E163A10E2C0C48D600E33364 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163A10D2C0C48D600E33364 /* User.swift */; };
 		E16BD3542C097A2C009EE29E /* SwiftUIAuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BD3532C097A2C009EE29E /* SwiftUIAuthApp.swift */; };
 		E16BD3562C097A2C009EE29E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BD3552C097A2C009EE29E /* ContentView.swift */; };
 		E16BD3582C097A2D009EE29E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16BD3572C097A2D009EE29E /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		E163A1072C0C40E900E33364 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E163A1092C0C444900E33364 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E163A10B2C0C465300E33364 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		E163A10D2C0C48D600E33364 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E16BD3502C097A2C009EE29E /* SwiftUIAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16BD3532C097A2C009EE29E /* SwiftUIAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAuthApp.swift; sourceTree = "<group>"; };
 		E16BD3552C097A2C009EE29E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		E16BD3612C097A3D009EE29E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E163A10D2C0C48D600E33364 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				E163A1062C097E5700E33364 /* InputView.swift in Sources */,
 				E16BD3542C097A2C009EE29E /* SwiftUIAuthApp.swift in Sources */,
 				E16BD3692C097AE8009EE29E /* LoginView.swift in Sources */,
+				E163A10E2C0C48D600E33364 /* User.swift in Sources */,
 				E163A10A2C0C444900E33364 /* ProfileView.swift in Sources */,
 				E163A1082C0C40E900E33364 /* RegistrationView.swift in Sources */,
 				E163A10C2C0C465300E33364 /* SettingsRowView.swift in Sources */,
