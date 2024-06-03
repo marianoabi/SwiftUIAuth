@@ -54,15 +54,22 @@ extension AuthViewModel {
     func signOut() {
         do {
             try Auth.auth().signOut()
-            self.userSession = nil
-            self.currentUser = nil
+            clearData()
         } catch {
             print("DEBUG: Failed to signout with error: \(error.localizedDescription)")
         }
     }
 
-    func deleteAccount() {
+    func deleteAccount() async throws {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
 
+        do {
+            try await Auth.auth().currentUser?.delete()
+            try await Firestore.firestore().collection("users").document(uid).delete()
+            signOut()
+        } catch {
+            print("DEBUG: Failed to delete user with error: \(error.localizedDescription)")
+        }
     }
 
     func fetchUser() async {
@@ -70,5 +77,10 @@ extension AuthViewModel {
 
         guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else { return }
         self.currentUser = try? snapshot.data(as: User.self)
+    }
+
+    func clearData() {
+        self.userSession = nil
+        self.currentUser = nil
     }
 }
